@@ -19,7 +19,6 @@ class GetUserDataFormat: ObservableObject{
             do {
                 let user: UserStore = try decoder.decode(UserStore.self, from: data)
                 DispatchQueue.main.async {
-//                    self.userData = user.items.reversed()
                 }
                 print(user)
             } catch {
