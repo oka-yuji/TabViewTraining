@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-       OnboardView()
+       SearchGithubUserView()
     }
 }
 
@@ -17,10 +17,4 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
-
-enum onboardName {
-    case first
-    case second
-    case third
 }
