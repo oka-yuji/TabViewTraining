@@ -11,13 +11,21 @@ struct Item: Decodable {
     var node_id: String
     var login: String
     var avatar_url: String
+    
 }
 
 struct UserStore: Decodable {
     var items: [Item]
 }
 
-enum CodingKeys: String, CodingKey {
-    case nodeId = "node_id"
-    case avatarUrl = "avatar_url"
+class Test {
+    var a: String
+    var b: String
+    var c: String
+    
+    init(a: String, b: String, c: String) {
+        self.a = a
+        self.b = b
+        self.c = c
+    }
 }

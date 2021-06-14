@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchGithubUserView: View {
-    @State var user = GetUserDataFormat()
+//    @State var user = GetUserDataFormat()
     var body: some View {
         NavigationView{
             VStack{

@@ -6,8 +6,7 @@
 //
 
 import Foundation
-class GetUserDataFormat: ObservableObject{
-    @Published var userData: [UserStore] = []
+class GetUserDataFormat {
     
     func getUserData(query: String ) {
         guard let url = URL(string: "https://api.github.com/search/users?q=\(query)") else {
@@ -17,8 +16,9 @@ class GetUserDataFormat: ObservableObject{
             guard let data = data else { return }
             let decoder: JSONDecoder = JSONDecoder()
             do {
-                let user: UserStore = try decoder.decode(UserStore.self, from: data)
+                let user = try decoder.decode(UserStore.self, from: data)
                 DispatchQueue.main.async {
+                    
                 }
                 print(user)
             } catch {

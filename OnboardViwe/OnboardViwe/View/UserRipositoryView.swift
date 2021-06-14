@@ -11,14 +11,13 @@ struct UserRipositoryView: View {
     @State var image: UIImage?
     var body: some View {
         VStack{
-            
             if let image = image {
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height: UIScreen.main.bounds.height * 0.5)
             }
-            VStack(spacing: 10.0){
+            VStack(spacing: 10.0) {
                 Text("title")
                     .font(.title)
                 VStack(alignment: .trailing, spacing: 10.0){
