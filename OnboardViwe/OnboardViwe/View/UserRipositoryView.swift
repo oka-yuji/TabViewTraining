@@ -45,7 +45,9 @@ struct UserRipositoryView: View {
 
 struct UserRipositoryView_Previews: PreviewProvider {
     static var previews: some View {
-        UserRipositoryView()
+        Group {
+            UserRipositoryView()
+        }
     }
 }
 
