@@ -8,13 +8,27 @@
 import SwiftUI
 
 class SearchUser: ObservableObject {
-    @Published var searchedUser: [Item] = []
-    
+    @Published var seawrchedUser: [Item] = []
     @Published var query = ""
-    
     @Published var page = 1
     
     func find() {
+        let url = "https://api.github.com/search/users?q=\(query)&page=\(page)&per_page=100"
         
+        let session = URLSession(configuration: .default)
+        session.dataTask(with: URL(string: url)!) { (data, _, error) in
+            guard let jsonData = data else { return }
+            do {
+                let users = try JSONDecoder().decode(User.self, from: jsonData)
+                
+                DispatchQueue.main.async {
+                    self.seawrchedUser.append(contentsOf: users.items)
+                }
+                
+            } catch {
+                print("error")
+            }
+        }
+        .resume()
     }
 }

@@ -29,18 +29,6 @@ struct Item: Decodable {
     var score: Int
 }
 
-struct UserStore: Decodable {
+struct User: Decodable {
     var items: [Item]
-}
-
-class Test {
-    var a: String
-    var b: String
-    var c: String
-    
-    init(a: String, b: String, c: String) {
-        self.a = a
-        self.b = b
-        self.c = c
-    }
 }
