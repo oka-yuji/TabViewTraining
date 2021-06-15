@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+   
     var body: some View {
-       SearchGithubUserView()
+        VStack {
+        SearchGithubUserView(searchData: SearchUser())
+        }
     }
 }
 

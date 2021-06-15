@@ -10,10 +10,12 @@ import SwiftUI
 class SearchUser: ObservableObject {
     @Published var seawrchedUser: [Item] = []
     @Published var query = ""
-    @Published var page = 1
+//    @Published var page = 1
     
     func find() {
-        let url = "https://api.github.com/search/users?q=\(query)&page=\(page)&per_page=100"
+        seawrchedUser.removeAll()
+        let url = "https://api.github.com/search/users?q=\(query)"
+//        let url = "https://api.github.com/search/users?q=\(query)&page=\(page)&per_page=100"
         
         let session = URLSession(configuration: .default)
         session.dataTask(with: URL(string: url)!) { (data, _, error) in
@@ -23,10 +25,11 @@ class SearchUser: ObservableObject {
                 
                 DispatchQueue.main.async {
                     self.seawrchedUser.append(contentsOf: users.items)
+                    print("ここのプリント\(self.seawrchedUser)")
                 }
                 
             } catch {
-                print("error")
+                print("error1")
             }
         }
         .resume()

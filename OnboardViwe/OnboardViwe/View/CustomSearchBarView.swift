@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct CustomSearchBarView: View {
-    @ObservedObject var searchUser: SearchUser
+    @EnvironmentObject var searchUser: SearchUser
+    @State var searchText = ""
+    private let maxTextLength = 10
     var body: some View {
         VStack{
             HStack{
                 Image(systemName: "magnifyingglass")
                     .font(.title2)
                     .foregroundColor(.secondary)
-                TextField("input user name", text: $searchUser.query)
+                TextField("input user name", text: $searchText, onCommit: {
+                    // enter時に作動
+                    searchUser.query = ""
+                    searchUser.query = searchText
+                    searchUser.find()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+//                        searchText = ""
+                        
+                        if searchUser.query != "" {
+                           
+                           
+                        }
+                    }
+                    
+                })
             }
             .padding(.vertical, 10)
             .padding(.horizontal)
@@ -24,12 +40,28 @@ struct CustomSearchBarView: View {
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .padding(.horizontal, 5)
         .padding(.top, 10)
-      
+        
+        .onChange(of: searchText) { newData in
+            if newData.count > maxTextLength {
+                searchText.removeLast()
+            }
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+//
+//                    if newData == searchData.query {
+//                        if searchData.query != "" {
+//                            searchData.find()
+//                        } else {
+//                            searchData.seawrchedUser.removeAll()
+//                        }
+//                    }
+//                }
+        }
     }
 }
 
 struct CustomSearchBarView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomSearchBarView(searchUser: SearchUser())
+        CustomSearchBarView()
+            .environmentObject(SearchUser())
     }
 }
