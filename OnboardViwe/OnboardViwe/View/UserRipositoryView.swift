@@ -30,13 +30,13 @@ struct UserRipositoryView: View {
                     .font(.title)
                 VStack(alignment: .trailing, spacing: 10.0){
                     HStack{
-                        Text(fetchLangageURL)
+                        Text("language / \(fetchLangageURL)")
                         Spacer()
-                        Text(fetchStarsURL)
+                        Text("Stars / \(fetchStarsURL)")
                     }
-                    Text(fetchWatchURL)
-                    Text(fetchForksURL)
-                    Text(fetchIssuesURL)
+                    Text("Watch / \(fetchWatchURL)")
+                    Text("Forks / \(fetchForksURL)")
+                    Text("Issues / \(fetchIssuesURL)")
                 }
             }
             .padding()

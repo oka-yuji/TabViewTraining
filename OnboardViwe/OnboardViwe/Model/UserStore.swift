@@ -23,7 +23,7 @@ struct Repository: Decodable {
     var fullName: String
     var language: String
     var stargazersCount: Int
-    var watchers: Int
+    var watchersCount: Int
     var forksCount: Int
     var openIssuesCount: Int
     var owner: User

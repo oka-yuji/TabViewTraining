@@ -9,17 +9,13 @@ import SwiftUI
 
 class SearchUser: ObservableObject {
     @Published var seawrchedRepository: [Repository] = []
-
     @Published var query = ""
-    //    @Published var page = 1
     
     func find() {
         seawrchedRepository.removeAll()
-        let url = "https://api.github.com/search/repositories?q=\(query)"
-        //        let url = "https://api.github.com/search/users?q=\(query)&page=\(page)&per_page=100"
-        
+        guard let url:URL = URL(string: "https://api.github.com/search/repositories?q=\(query)") else { return }
         let session = URLSession(configuration: .default)
-        session.dataTask(with: URL(string: url)!) { (data, _, error) in
+        session.dataTask(with: url) { (data, _, error) in
             guard let jsonData = data else { return }
             do {
                 let decoder = JSONDecoder()
@@ -28,8 +24,8 @@ class SearchUser: ObservableObject {
                
                                 DispatchQueue.main.async {
                                     self.seawrchedRepository.append(contentsOf: repositories.items)
-                                    print("ここのプリント\(repositories.items[0].owner.avatarUrl)")
                                 }
+                print("seikou")
             } catch {
                 print("error1")
             }

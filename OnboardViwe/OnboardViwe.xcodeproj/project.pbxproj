@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		282CF3202678452D00FF6FDA /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CF31F2678452D00FF6FDA /* Test.swift */; };
 		286475892674FEAA00EAC5A8 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286475882674FEAA00EAC5A8 /* UserStore.swift */; };
 		2864758B2674FF3500EAC5A8 /* SearchGithubUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */; };
 		2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */; };
@@ -45,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		282CF31F2678452D00FF6FDA /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		286475882674FEAA00EAC5A8 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGithubUserView.swift; sourceTree = "<group>"; };
 		2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBarView.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */,
 				2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */,
 				2877B70E267614B100A00BD6 /* UserRipositoryView.swift */,
-				282CF31F2678452D00FF6FDA /* Test.swift */,
 				28DC4DC0266FA3DD0006EEFD /* OnboardView.swift */,
 				28DC4DC4266FA45F0006EEFD /* FirstView.swift */,
 				28DC4DC6266FA4700006EEFD /* SecondView.swift */,
@@ -323,7 +320,6 @@
 				28DC4DC7266FA4700006EEFD /* SecondView.swift in Sources */,
 				2877B70F267614B100A00BD6 /* UserRipositoryView.swift in Sources */,
 				28DC4DC1266FA3DD0006EEFD /* OnboardView.swift in Sources */,
-				282CF3202678452D00FF6FDA /* Test.swift in Sources */,
 				28DC4DC5266FA45F0006EEFD /* FirstView.swift in Sources */,
 				28FE3B4B267597E200F368D8 /* SearchUser.swift in Sources */,
 				2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */,

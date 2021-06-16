@@ -22,15 +22,6 @@ struct CustomSearchBarView: View {
                     searchUser.query = ""
                     searchUser.query = searchText
                     searchUser.find()
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-////                        searchText = ""
-//                        
-//                        if searchUser.query != "" {
-//                           
-//                           
-//                        }
-//                    }
-                    
                 })
             }
             .padding(.vertical, 10)

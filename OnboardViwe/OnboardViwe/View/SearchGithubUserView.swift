@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct SearchGithubUserView: View {
-    //    @State var user = GetUserDataFormat()
     @ObservedObject var searchData: SearchUser
-    
     var body: some View {
         NavigationView {
             VStack(spacing: 0.0){
@@ -19,7 +17,7 @@ struct SearchGithubUserView: View {
                 
                 List(searchData.seawrchedRepository, id: \.nodeId) { user in
                     NavigationLink (
-                        destination: UserRipositoryView(fetchFullName: user.fullName, fetchLangageURL: user.language, fetchStarsURL: "\(user.stargazersCount)", fetchWatchURL: "\(user.watchers)", fetchForksURL: "\(user.forksCount)", fetchIssuesURL: "\(user.openIssuesCount)", fetchAvatarURL: user.owner.avatarUrl)
+                        destination: UserRipositoryView(fetchFullName: user.fullName, fetchLangageURL: user.language, fetchStarsURL: "\(user.stargazersCount)", fetchWatchURL: "\(user.watchersCount)", fetchForksURL: "\(user.forksCount)", fetchIssuesURL: "\(user.openIssuesCount)", fetchAvatarURL: user.owner.avatarUrl)
                             .ignoresSafeArea(edges: .bottom))
                     {
                         Text(user.fullName)
