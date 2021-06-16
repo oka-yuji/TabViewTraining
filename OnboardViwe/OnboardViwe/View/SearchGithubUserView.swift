@@ -24,12 +24,6 @@ struct SearchGithubUserView: View {
                     {
                     Text(user.login)
                     }
-                    .onAppear {
-                        if user.node_id == searchData.seawrchedUser.last?.node_id {
-//                            searchData.find()
-                        }
-                    }
-
             }
             .navigationTitle("GitHub")
             .navigationBarTitleDisplayMode(.inline)
