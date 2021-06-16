@@ -33,7 +33,7 @@ struct Item: Codable {
     var node_id: String
     var name: String
     var full_name: String
-    var owner: [Owner]
+//    var owner: [Owner]
     
 
 //        var login: String

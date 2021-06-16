@@ -14,7 +14,7 @@ class SearchUser: ObservableObject {
     
     func find() {
         seawrchedUser.removeAll()
-        let url = "https://api.github.com/search/users?q=\(query)"
+        let url = "https://api.github.com/search/repositories?q=\(query)"
 //        let url = "https://api.github.com/search/users?q=\(query)&page=\(page)&per_page=100"
         
         let session = URLSession(configuration: .default)

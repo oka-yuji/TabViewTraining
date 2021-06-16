@@ -19,10 +19,10 @@ struct SearchGithubUserView: View {
                 
                 List(searchData.seawrchedUser, id: \.node_id) { user in
                     NavigationLink (
-                        destination: UserRipositoryView(fetchLangageURL: user.events_url, fetchStarsURL: user.starred_url, fetchWatchURL: user.following_url, fetchForksURL: user.gists_url, fetchIssuesURL: user.login, fetchAvatarURL: user.avatar_url)
+                        destination: UserRipositoryView(fetchLangageURL: user.name, fetchStarsURL: user.name, fetchWatchURL: user.name, fetchForksURL: user.name, fetchIssuesURL: user.name, fetchAvatarURL: user.name)
                             .ignoresSafeArea(edges: .bottom))
                     {
-                        Text(user.login)
+                        Text(user.full_name)
                     }
                 }
                 .navigationTitle("GitHub")
