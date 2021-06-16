@@ -26,25 +26,6 @@ import SwiftUI
 //    var type: String
 //    var site_admin: Bool
 //
-//    enum CodingKeys: String, CodingKey {
-//        case login
-//        case id
-//        case nodeID = "node_id"
-//        case avatarURL = "avatar_url"
-//        case url
-//        case html_url
-//        case followers_url
-//        case following_url
-//        case gists_url
-//        case starred_url
-//        case subscriptions_url
-//        case organizations_url
-//        case repos_url
-//        case events_url
-//        case received_events_url
-//        case type
-//        case site_admin
-//    }
 //
 //}
 

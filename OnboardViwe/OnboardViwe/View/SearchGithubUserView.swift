@@ -8,28 +8,26 @@
 import SwiftUI
 
 struct SearchGithubUserView: View {
-//    @State var user = GetUserDataFormat()
+    //    @State var user = GetUserDataFormat()
     @ObservedObject var searchData: SearchUser
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack(spacing: 0.0){
                 CustomSearchBarView()
                     .environmentObject(searchData)
                 
-            List(searchData.seawrchedUser, id: \.node_id) { user in
-                NavigationLink (
-                    destination: UserRipositoryView(fetchLangageURL: user.events_url, fetchStarsURL: user.starred_url, fetchWatchURL: user.following_url, fetchForksURL: user.gists_url, fetchIssuesURL: user.login, fetchAvatarURL: user.avatar_url)
-                        .ignoresSafeArea(edges: .bottom))
+                List(searchData.seawrchedUser, id: \.node_id) { user in
+                    NavigationLink (
+                        destination: UserRipositoryView(fetchLangageURL: user.events_url, fetchStarsURL: user.starred_url, fetchWatchURL: user.following_url, fetchForksURL: user.gists_url, fetchIssuesURL: user.login, fetchAvatarURL: user.avatar_url)
+                            .ignoresSafeArea(edges: .bottom))
                     {
-                    Text(user.login)
+                        Text(user.login)
                     }
+                }
+                .navigationTitle("GitHub")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationTitle("GitHub")
-            .navigationBarTitleDisplayMode(.inline)
-        }
-
-
             Spacer()
         }
     }
