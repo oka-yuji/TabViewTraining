@@ -36,30 +36,7 @@ struct Item: Codable {
 //    var full_name: String
 //    var owner: [Owner]
     
-//    enum CoodingKeys: String, CodingKey {
-//        case login
-//        case id
-//        case nodeID = "node_id"
-//        case avatar_url
-//        case gravatar_id
-//        case url
-//        case html_url
-//        case followers_url
-//        case following_url
-//        case gists_url
-//        case starred_url
-//        case subscriptions_url
-//        case organizations_url
-//        case repos_url
-//        case events_url
-//        case received_events_url
-//        case type
-//        case site_admin
-//        case score
-//    }
-    
-   
-    
+
         var login: String
         var id: Int
         var node_id: String
