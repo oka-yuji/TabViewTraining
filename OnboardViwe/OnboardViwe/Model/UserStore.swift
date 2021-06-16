@@ -7,33 +7,26 @@
 
 import SwiftUI
 
-struct Owner: Codable {
+struct User: Decodable {
     var login: String
-    var id: Int
-    var nodeID: String
-    var avatarURL: String
-    var url: String
-    var html_url: String
-    var followers_url: String
-    var following_url: String
-    var gists_url: String
-    var starred_url: String
-    var subscriptions_url:String
-    var organizations_url: String
-    var repos_url: String
-    var events_url: String
-    var received_events_url: String
-    var type: String
-    var site_admin: Bool
+    var avatarUrl: String
+    
+    
+    
 }
 
 
-struct Item: Codable {
+struct Repository: Decodable {
     var id: Int
-    var node_id: String
+    var nodeId: String
     var name: String
-    var full_name: String
-//    var owner: [Owner]
+    var fullName: String
+    var language: String
+    var stargazersCount: Int
+    var watchers: Int
+    var forksCount: Int
+    var openIssuesCount: Int
+    var owner: User
     
 
 //        var login: String
@@ -57,6 +50,6 @@ struct Item: Codable {
 //        var score: Int
 }
 
-struct User: Codable {
-    var items: [Item]
+struct Meta: Decodable {
+    var items: [Repository]
 }

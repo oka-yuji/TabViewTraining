@@ -22,14 +22,14 @@ struct CustomSearchBarView: View {
                     searchUser.query = ""
                     searchUser.query = searchText
                     searchUser.find()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-//                        searchText = ""
-                        
-                        if searchUser.query != "" {
-                           
-                           
-                        }
-                    }
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+////                        searchText = ""
+//                        
+//                        if searchUser.query != "" {
+//                           
+//                           
+//                        }
+//                    }
                     
                 })
             }
@@ -40,7 +40,7 @@ struct CustomSearchBarView: View {
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .padding(.horizontal, 5)
         .padding(.top, 10)
-        
+        // maxTextLengthで指定している文字数までしかTextFieldで打てない処理
         .onChange(of: searchText) { newData in
             if newData.count > maxTextLength {
                 searchText.removeLast()

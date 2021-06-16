@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserRipositoryView: View {
     @State var image: UIImage?
+    let fetchFullName: String
     let fetchLangageURL: String
     let fetchStarsURL: String
     let fetchWatchURL: String
@@ -25,7 +26,7 @@ struct UserRipositoryView: View {
                     .clipShape(Circle())
             }
             VStack(spacing: 10.0) {
-                Text("title")
+                Text(fetchFullName)
                     .font(.title)
                 VStack(alignment: .trailing, spacing: 10.0){
                     HStack{
@@ -53,7 +54,7 @@ struct UserRipositoryView: View {
 struct UserRipositoryView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            UserRipositoryView(fetchLangageURL: "language", fetchStarsURL: "stars", fetchWatchURL: "watch", fetchForksURL: "forks", fetchIssuesURL: "issues", fetchAvatarURL: "https://illustimage.com/photo/6845.png")
+            UserRipositoryView(fetchFullName: "Title", fetchLangageURL: "language", fetchStarsURL: "stars", fetchWatchURL: "watch", fetchForksURL: "forks", fetchIssuesURL: "issues", fetchAvatarURL: "https://illustimage.com/photo/6845.png")
         }
     }
 }

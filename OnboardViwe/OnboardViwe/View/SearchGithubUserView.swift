@@ -17,12 +17,12 @@ struct SearchGithubUserView: View {
                 CustomSearchBarView()
                     .environmentObject(searchData)
                 
-                List(searchData.seawrchedUser, id: \.node_id) { user in
+                List(searchData.seawrchedRepository, id: \.nodeId) { user in
                     NavigationLink (
-                        destination: UserRipositoryView(fetchLangageURL: user.name, fetchStarsURL: user.name, fetchWatchURL: user.name, fetchForksURL: user.name, fetchIssuesURL: user.name, fetchAvatarURL: user.name)
+                        destination: UserRipositoryView(fetchFullName: user.fullName, fetchLangageURL: user.language, fetchStarsURL: "\(user.stargazersCount)", fetchWatchURL: "\(user.watchers)", fetchForksURL: "\(user.forksCount)", fetchIssuesURL: "\(user.openIssuesCount)", fetchAvatarURL: user.owner.avatarUrl)
                             .ignoresSafeArea(edges: .bottom))
                     {
-                        Text(user.full_name)
+                        Text(user.fullName)
                     }
                 }
                 .navigationTitle("GitHub")
