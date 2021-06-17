@@ -10,7 +10,7 @@ import SwiftUI
 struct UserRipositoryView: View {
     @State var image: UIImage?
     let fetchFullName: String
-    let fetchLangageURL: String
+    let fetchLanguageURL: String
     let fetchStarsURL: String
     let fetchWatchURL: String
     let fetchForksURL: String
@@ -30,7 +30,7 @@ struct UserRipositoryView: View {
                     .font(.title)
                 VStack(alignment: .trailing, spacing: 10.0){
                     HStack{
-                        Text("language / \(fetchLangageURL)")
+                        Text("Written in / \(fetchLanguageURL)")
                         Spacer()
                         Text("Stars / \(fetchStarsURL)")
                     }
@@ -42,9 +42,10 @@ struct UserRipositoryView: View {
             .padding()
             Spacer()
         }
+// image
         .onAppear {
-            let url = fetchAvatarURL
-            downloadImageAsync(url: URL(string: url)!) { image in
+            guard let url = URL(string: fetchAvatarURL) else { return }
+            downloadImageAsync(url: url) { image in
                 self.image = image
             }
         }
@@ -54,7 +55,7 @@ struct UserRipositoryView: View {
 struct UserRipositoryView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            UserRipositoryView(fetchFullName: "Title", fetchLangageURL: "language", fetchStarsURL: "stars", fetchWatchURL: "watch", fetchForksURL: "forks", fetchIssuesURL: "issues", fetchAvatarURL: "https://illustimage.com/photo/6845.png")
+            UserRipositoryView(fetchFullName: "Title", fetchLanguageURL: "Language", fetchStarsURL: "stars", fetchWatchURL: "watch", fetchForksURL: "forks", fetchIssuesURL: "issues", fetchAvatarURL: "https://illustimage.com/photo/6845.png")
         }
     }
 }

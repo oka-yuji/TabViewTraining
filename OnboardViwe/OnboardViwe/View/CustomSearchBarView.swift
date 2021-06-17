@@ -36,16 +36,6 @@ struct CustomSearchBarView: View {
             if newData.count > maxTextLength {
                 searchText.removeLast()
             }
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-//
-//                    if newData == searchData.query {
-//                        if searchData.query != "" {
-//                            searchData.find()
-//                        } else {
-//                            searchData.seawrchedUser.removeAll()
-//                        }
-//                    }
-//                }
         }
     }
 }
