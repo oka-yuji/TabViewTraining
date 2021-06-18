@@ -8,7 +8,7 @@
 import SwiftUI
 
 class SearchUser: ObservableObject {
-    @Published var seawrchedRepository: [Repository] = []
+    @Published var seawrchedRepository: [Item] = []
     @Published var query = ""
     
     func find() {
@@ -20,12 +20,10 @@ class SearchUser: ObservableObject {
             do {
                 let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let repositories = try decoder.decode(Rsults.self, from: jsonData)
+                let repositories = try decoder.decode(Repositories.self, from: jsonData)
                                 DispatchQueue.main.async {
                                     self.seawrchedRepository.append(contentsOf: repositories.items)
                                 }
-                print(repositories.items[0].fullName ?? "")
-                print("seikou")
             } catch {
                 print("error1")
             }

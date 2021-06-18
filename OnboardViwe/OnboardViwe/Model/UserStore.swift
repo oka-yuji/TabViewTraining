@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct User: Decodable {
+struct Owner: Decodable {
     var avatarUrl: String?
 }
 
-struct Repository: Decodable {
-    var nodeId: String
+struct Item: Decodable {
+    var nodeId: String?
     var fullName: String?
-    var owner: User
+    var owner: Owner
     var stargazersCount: Int?
     var watchersCount: Int?
     var language: String?
@@ -23,6 +23,6 @@ struct Repository: Decodable {
 
 }
 
-struct Rsults: Decodable {
-    var items: [Repository]
+struct Repositories: Decodable {
+    var items: [Item]
 }

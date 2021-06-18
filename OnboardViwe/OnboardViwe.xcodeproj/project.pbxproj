@@ -11,6 +11,7 @@
 		2864758B2674FF3500EAC5A8 /* SearchGithubUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */; };
 		2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */; };
 		2877B70F267614B100A00BD6 /* UserRipositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877B70E267614B100A00BD6 /* UserRipositoryView.swift */; };
+		287A7980267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A797F267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift */; };
 		28A13172266BC9220056E848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13171266BC9220056E848 /* AppDelegate.swift */; };
 		28A13174266BC9220056E848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13173266BC9220056E848 /* SceneDelegate.swift */; };
 		28A13176266BC9220056E848 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13175266BC9220056E848 /* ContentView.swift */; };
@@ -48,6 +49,7 @@
 		2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGithubUserView.swift; sourceTree = "<group>"; };
 		2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBarView.swift; sourceTree = "<group>"; };
 		2877B70E267614B100A00BD6 /* UserRipositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRipositoryView.swift; sourceTree = "<group>"; };
+		287A797F267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserRepositoriesFormatter.swift; sourceTree = "<group>"; };
 		28A1316E266BC9220056E848 /* OnboardViwe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardViwe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A13171266BC9220056E848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28A13173266BC9220056E848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				286475882674FEAA00EAC5A8 /* UserStore.swift */,
+				287A797F267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				28DC4DC1266FA3DD0006EEFD /* OnboardView.swift in Sources */,
 				28DC4DC5266FA45F0006EEFD /* FirstView.swift in Sources */,
 				28FE3B4B267597E200F368D8 /* SearchUser.swift in Sources */,
+				287A7980267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift in Sources */,
 				2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */,
 				28A13172266BC9220056E848 /* AppDelegate.swift in Sources */,
 				28A13174266BC9220056E848 /* SceneDelegate.swift in Sources */,
