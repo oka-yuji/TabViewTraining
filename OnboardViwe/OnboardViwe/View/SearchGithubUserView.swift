@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct SearchGithubUserView: View {
-    @ObservedObject var searchViewModel: SearchViewModel
+    @ObservedObject var searchViewModel = SearchViewModel()
     var body: some View {
         NavigationView {
             VStack(spacing: 0.0){
                 CustomSearchBarView()
                     .environmentObject(SearchViewModel())
+                    
                 
-                List(searchViewModel.itemData, id: \.nodeId) { user in
-//                    List(searchData.seawrchedRepository, id: \.nodeId) { user in
+               
+                List(searchViewModel.itemData, id: \.nodeId) { item in
                     NavigationLink (
-                        destination: UserRipositoryView(fetchFullName: user.fullName ?? "", fetchLanguageText: user.language ?? "", fetchStarsText: "\(user.stargazersCount ?? 0)", fetchWatchText: "\(user.watchersCount ?? 0)", fetchForksText: "\(user.forksCount ?? 0)", fetchIssuesText: "\(user.openIssuesCount ?? 0)", fetchAvatarURL: user.owner.avatarUrl ?? "")
+                        destination: UserRipositoryView(fetchFullName: item.fullName ?? "", fetchLanguageText: item.language ?? "", fetchStarsText: "\(item.stargazersCount ?? 0)", fetchWatchText: "\(item.watchersCount ?? 0)", fetchForksText: "\(item.forksCount ?? 0)", fetchIssuesText: "\(item.openIssuesCount ?? 0)", fetchAvatarURL: item.owner.avatarUrl ?? "")
                             .ignoresSafeArea(edges: .bottom))
                     {
-                        Text(user.fullName ?? "")
+                        Text(item.fullName ?? "")
                     }
                 }
                 .navigationTitle("GitHub")

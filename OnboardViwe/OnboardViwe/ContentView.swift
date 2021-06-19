@@ -11,7 +11,7 @@ struct ContentView: View {
    
     var body: some View {
         VStack {
-            SearchGithubUserView(searchData: SearchUser(), searchViewModel: SearchViewModel())
+            SearchGithubUserView(searchViewModel: SearchViewModel())
         }
     }
 }
