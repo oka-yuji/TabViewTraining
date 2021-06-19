@@ -25,6 +25,7 @@
 		28DC4DC3266FA4350006EEFD /* TabViewTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC4DC2266FA4350006EEFD /* TabViewTraining.swift */; };
 		28DC4DC5266FA45F0006EEFD /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC4DC4266FA45F0006EEFD /* FirstView.swift */; };
 		28DC4DC7266FA4700006EEFD /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC4DC6266FA4700006EEFD /* SecondView.swift */; };
+		28E7CD56267DE86100155FA8 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7CD55267DE86100155FA8 /* Test.swift */; };
 		28FE3B4B267597E200F368D8 /* SearchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE3B4A267597E200F368D8 /* SearchUser.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		28DC4DC2266FA4350006EEFD /* TabViewTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewTraining.swift; sourceTree = "<group>"; };
 		28DC4DC4266FA45F0006EEFD /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		28DC4DC6266FA4700006EEFD /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		28E7CD55267DE86100155FA8 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		28FE3B4A267597E200F368D8 /* SearchUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				28DC4DC4266FA45F0006EEFD /* FirstView.swift */,
 				28DC4DC6266FA4700006EEFD /* SecondView.swift */,
 				28DC4DC2266FA4350006EEFD /* TabViewTraining.swift */,
+				28E7CD55267DE86100155FA8 /* Test.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			files = (
 				28DC4DC7266FA4700006EEFD /* SecondView.swift in Sources */,
 				2877B70F267614B100A00BD6 /* UserRipositoryView.swift in Sources */,
+				28E7CD56267DE86100155FA8 /* Test.swift in Sources */,
 				28DC4DC1266FA3DD0006EEFD /* OnboardView.swift in Sources */,
 				28DC4DC5266FA45F0006EEFD /* FirstView.swift in Sources */,
 				28FE3B4B267597E200F368D8 /* SearchUser.swift in Sources */,

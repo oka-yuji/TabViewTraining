@@ -8,23 +8,27 @@
 import SwiftUI
 
 struct SearchGithubUserView: View {
-    @ObservedObject var searchViewModel = SearchViewModel()
+    @EnvironmentObject var searchViewModel: SearchViewModel
     var body: some View {
         NavigationView {
             VStack(spacing: 0.0){
                 CustomSearchBarView()
-                    .environmentObject(SearchViewModel())
-                    
-                
-               
+                Text("\(searchViewModel.query2)")
                 List(searchViewModel.itemData, id: \.nodeId) { item in
                     NavigationLink (
-                        destination: UserRipositoryView(fetchFullName: item.fullName ?? "", fetchLanguageText: item.language ?? "", fetchStarsText: "\(item.stargazersCount ?? 0)", fetchWatchText: "\(item.watchersCount ?? 0)", fetchForksText: "\(item.forksCount ?? 0)", fetchIssuesText: "\(item.openIssuesCount ?? 0)", fetchAvatarURL: item.owner.avatarUrl ?? "")
-                            .ignoresSafeArea(edges: .bottom))
+                        destination: UserRipositoryView(fetchFullName: item.fullName ?? "", fetchLanguageText: item.fullName ?? "", fetchStarsText: item.fullName ?? "", fetchWatchText: item.fullName ?? "", fetchForksText: item.fullName ?? "", fetchIssuesText: item.fullName ?? "", fetchAvatarURL: item.fullName ?? ""))
                     {
-                        Text(item.fullName ?? "")
-                    }
+                        Text(item.fullName ?? "miss")
                 }
+                }
+//                List(searchViewModel.itemData, id: \.nodeId) { item in
+//                    NavigationLink (
+//                        destination: UserRipositoryView(fetchFullName: item.fullName ?? "", fetchLanguageText: item.language ?? "", fetchStarsText: "\(item.stargazersCount ?? 0)", fetchWatchText: "\(item.watchersCount ?? 0)", fetchForksText: "\(item.forksCount ?? 0)", fetchIssuesText: "\(item.openIssuesCount ?? 0)", fetchAvatarURL: item.owner.avatarUrl ?? "")
+//                            .ignoresSafeArea(edges: .bottom))
+//                    {
+//                        Text(item.fullName ?? "")
+//                    }
+//                }
                 .navigationTitle("GitHub")
                 .navigationBarTitleDisplayMode(.inline)
             }
@@ -35,7 +39,8 @@ struct SearchGithubUserView: View {
 
 struct SearchGithubUserView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchGithubUserView(searchViewModel: SearchViewModel())
+        SearchGithubUserView()
+            .environmentObject(SearchViewModel())
     }
 }
 

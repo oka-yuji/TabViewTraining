@@ -11,16 +11,22 @@ class SearchViewModel: ObservableObject {
     let fetcher = FetchUserRepositoriesFormatter()
     
     @Published var itemData: [Item] = []
-    @Published var query2 = "swift"
+    @Published var query2 = ""
     
     func fetchRepository() {
         itemData.removeAll()
-        self.fetcher.fetchUserRepository(query: query2) { (item) in
-            DispatchQueue.main.async {
-            self.itemData = item
-            print("seikou")
-                print(item[0].fullName ?? "")
-            }
+        self.fetcher.fetchUserRepository(query: query2) { (items) in
+        
+            self.itemData.append(contentsOf: items)
+            print(self.itemData.count)
+            
         }
     }
+    
+//    init() {
+//        self.fetcher.fetchUserRepository(query: "swift") { (items) in
+//               self.itemData = items
+//           }
+//       }
+    
 }

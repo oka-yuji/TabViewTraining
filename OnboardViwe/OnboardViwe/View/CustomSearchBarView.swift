@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CustomSearchBarView: View {
-    @EnvironmentObject var searchUser: SearchUser
     @EnvironmentObject var searchViewModel: SearchViewModel
     @State var searchText = ""
     private let maxTextLength = 10
@@ -20,13 +19,6 @@ struct CustomSearchBarView: View {
                     .foregroundColor(.secondary)
                 TextField("input user name", text: $searchText, onCommit: {
                     // enter時に作動
-                    
-                    //旧システム
-//                    searchUser.query = ""
-//                    searchUser.query = searchText
-//                    searchUser.find()
-                    
-                    //新機能試走
                     searchViewModel.query2 = ""
                     searchViewModel.query2 = searchText
                     searchViewModel.fetchRepository()
@@ -51,7 +43,5 @@ struct CustomSearchBarView: View {
 struct CustomSearchBarView_Previews: PreviewProvider {
     static var previews: some View {
         CustomSearchBarView()
-            .environmentObject(SearchUser())
-            .environmentObject(SearchViewModel())
     }
 }
