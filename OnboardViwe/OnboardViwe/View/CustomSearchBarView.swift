@@ -19,9 +19,10 @@ struct CustomSearchBarView: View {
                     .foregroundColor(.secondary)
                 TextField("input user name", text: $searchText, onCommit: {
                     // enter時に作動
-                    searchViewModel.query2 = ""
-                    searchViewModel.query2 = searchText
-                    searchViewModel.fetchRepository()
+                    searchViewModel.query = ""
+                    searchViewModel.query = searchText
+                    searchViewModel.fetcher()
+//                    searchViewModel.fetchRepository()
                 })
             }
             .padding(.vertical, 10)

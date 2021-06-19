@@ -13,22 +13,15 @@ struct SearchGithubUserView: View {
         NavigationView {
             VStack(spacing: 0.0){
                 CustomSearchBarView()
-                Text("\(searchViewModel.query2)")
+                Text("\(searchViewModel.query)")
                 List(searchViewModel.itemData, id: \.nodeId) { item in
                     NavigationLink (
-                        destination: UserRipositoryView(fetchFullName: item.fullName ?? "", fetchLanguageText: item.fullName ?? "", fetchStarsText: item.fullName ?? "", fetchWatchText: item.fullName ?? "", fetchForksText: item.fullName ?? "", fetchIssuesText: item.fullName ?? "", fetchAvatarURL: item.fullName ?? ""))
+                        destination: UserRipositoryView(fetchFullName: item.fullName ?? "", fetchLanguageText: item.language ?? "", fetchStarsText: "\(item.stargazersCount ?? 0)", fetchWatchText: "\(item.watchersCount ?? 0)", fetchForksText: "\(item.forksCount ?? 0)", fetchIssuesText: "\(item.openIssuesCount ?? 0)", fetchAvatarURL: item.owner.avatarUrl ?? "")
+                            .ignoresSafeArea(edges: .bottom))
                     {
-                        Text(item.fullName ?? "miss")
+                        Text(item.fullName ?? "")
+                    }
                 }
-                }
-//                List(searchViewModel.itemData, id: \.nodeId) { item in
-//                    NavigationLink (
-//                        destination: UserRipositoryView(fetchFullName: item.fullName ?? "", fetchLanguageText: item.language ?? "", fetchStarsText: "\(item.stargazersCount ?? 0)", fetchWatchText: "\(item.watchersCount ?? 0)", fetchForksText: "\(item.forksCount ?? 0)", fetchIssuesText: "\(item.openIssuesCount ?? 0)", fetchAvatarURL: item.owner.avatarUrl ?? "")
-//                            .ignoresSafeArea(edges: .bottom))
-//                    {
-//                        Text(item.fullName ?? "")
-//                    }
-//                }
                 .navigationTitle("GitHub")
                 .navigationBarTitleDisplayMode(.inline)
             }
@@ -40,7 +33,7 @@ struct SearchGithubUserView: View {
 struct SearchGithubUserView_Previews: PreviewProvider {
     static var previews: some View {
         SearchGithubUserView()
-            .environmentObject(SearchViewModel())
+            .environmentObject(SearchViewModel(fetchUser: FetchUserRepositoriesFormatter()))
     }
 }
 

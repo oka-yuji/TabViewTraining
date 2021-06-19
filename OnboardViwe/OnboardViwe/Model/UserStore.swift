@@ -5,7 +5,7 @@
 //  Created by 岡優志 on 2021/06/12.
 //
 
-import SwiftUI
+import Foundation
 
 struct Owner: Decodable {
     var avatarUrl: String?

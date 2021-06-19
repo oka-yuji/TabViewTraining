@@ -8,25 +8,34 @@
 import Foundation
 
 class SearchViewModel: ObservableObject {
-    let fetcher = FetchUserRepositoriesFormatter()
+    // 疎結合
+    private let fetchUser: Fetcher
+    init(fetchUser: Fetcher) {
+        self.fetchUser = fetchUser
+    }
     
+    // Viewとのバインディング変数プロパティ
     @Published var itemData: [Item] = []
-    @Published var query2 = ""
+    @Published var query = ""
+    
+    func fetcher() {
+        let queryText = query
+        fetchUser.fetchUserRepository(query: queryText) {(item) in self.itemData.append(contentsOf: item)}
+    }
+    
+    
+    
+    
+    
+    
+    let fetched = FetchUserRepositoriesFormatter()
+    
+   
     
     func fetchRepository() {
         itemData.removeAll()
-        self.fetcher.fetchUserRepository(query: query2) { (items) in
-        
+        self.fetched.fetchUserRepository(query: query) { (items) in
             self.itemData.append(contentsOf: items)
-            print(self.itemData.count)
-            
         }
     }
-    
-//    init() {
-//        self.fetcher.fetchUserRepository(query: "swift") { (items) in
-//               self.itemData = items
-//           }
-//       }
-    
 }
