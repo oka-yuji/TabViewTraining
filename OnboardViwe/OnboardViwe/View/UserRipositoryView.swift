@@ -10,11 +10,11 @@ import SwiftUI
 struct UserRipositoryView: View {
     @State var image: UIImage?
     let fetchFullName: String
-    let fetchLanguageURL: String
-    let fetchStarsURL: String
-    let fetchWatchURL: String
-    let fetchForksURL: String
-    let fetchIssuesURL: String
+    let fetchLanguageText: String
+    let fetchStarsText: String
+    let fetchWatchText: String
+    let fetchForksText: String
+    let fetchIssuesText: String
     let fetchAvatarURL: String
     var body: some View {
         VStack{
@@ -30,13 +30,13 @@ struct UserRipositoryView: View {
                     .font(.title)
                 VStack(alignment: .trailing, spacing: 10.0){
                     HStack{
-                        Text("Written in / \(fetchLanguageURL)")
+                        Text("Written in / \(fetchLanguageText)")
                         Spacer()
-                        Text("Stars / \(fetchStarsURL)")
+                        Text("Stars / \(fetchStarsText)")
                     }
-                    Text("Watch / \(fetchWatchURL)")
-                    Text("Forks / \(fetchForksURL)")
-                    Text("Issues / \(fetchIssuesURL)")
+                    Text("Watch / \(fetchWatchText)")
+                    Text("Forks / \(fetchForksText)")
+                    Text("Issues / \(fetchIssuesText)")
                 }
             }
             .padding()
@@ -55,7 +55,7 @@ struct UserRipositoryView: View {
 struct UserRipositoryView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            UserRipositoryView(fetchFullName: "Title", fetchLanguageURL: "Language", fetchStarsURL: "stars", fetchWatchURL: "watch", fetchForksURL: "forks", fetchIssuesURL: "issues", fetchAvatarURL: "https://illustimage.com/photo/6845.png")
+            UserRipositoryView(fetchFullName: "Title", fetchLanguageText: "Language", fetchStarsText: "stars", fetchWatchText: "watch", fetchForksText: "forks", fetchIssuesText: "issues", fetchAvatarURL: "https://illustimage.com/photo/6845.png")
         }
     }
 }

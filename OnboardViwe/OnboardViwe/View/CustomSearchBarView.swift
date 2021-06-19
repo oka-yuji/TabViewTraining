@@ -20,10 +20,11 @@ struct CustomSearchBarView: View {
                     .foregroundColor(.secondary)
                 TextField("input user name", text: $searchText, onCommit: {
                     // enter時に作動
-                    //急システム
-                    searchUser.query = ""
-                    searchUser.query = searchText
-                    searchUser.find()
+                    
+                    //旧システム
+//                    searchUser.query = ""
+//                    searchUser.query = searchText
+//                    searchUser.find()
                     
                     //新機能試走
                     searchViewModel.query2 = ""

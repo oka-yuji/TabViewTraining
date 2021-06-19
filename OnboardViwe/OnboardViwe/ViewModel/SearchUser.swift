@@ -24,6 +24,8 @@ class SearchUser: ObservableObject {
                                 DispatchQueue.main.async {
                                     self.seawrchedRepository.append(contentsOf: repositories.items)
                                 }
+                print("user seikou")
+                print(self.seawrchedRepository)
             } catch {
                 print("error1")
             }

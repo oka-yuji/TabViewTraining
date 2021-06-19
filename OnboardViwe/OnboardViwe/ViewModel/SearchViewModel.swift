@@ -14,12 +14,19 @@ class SearchViewModel: ObservableObject {
     @Published var query2 = ""
     
     func fetchRepository() {
-        print("seikou")
         itemData.removeAll()
-        fetcher.fetchUserRepository (query: query2) { (item) in
-            self.itemData = item
-        }
+        print("fetch seikou")
+       
         
+//        fetcher.fetchUserRepository (query: query2) { (item) in
+//            self.itemData = item
+//        }
+            
+                self.fetcher.fetchUserRepository (query: query2) { (item) in
+                    self.itemData = item
+                }
+            
+        print(itemData)
     }
     
     
@@ -28,4 +35,6 @@ class SearchViewModel: ObservableObject {
 //            self.itemData = item
 //        }
 //    }
+    
+    
 }
