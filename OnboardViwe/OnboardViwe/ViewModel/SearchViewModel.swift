@@ -13,7 +13,6 @@ class SearchViewModel: ObservableObject {
     init(fetchUser: Fetcher) {
         self.fetchUser = fetchUser
     }
-    
     // Viewとのバインディング変数プロパティ
     @Published var itemData: [Item] = []
     @Published var query = ""
@@ -23,15 +22,7 @@ class SearchViewModel: ObservableObject {
         fetchUser.fetchUserRepository(query: queryText) {(item) in self.itemData.append(contentsOf: item)}
     }
     
-    
-    
-    
-    
-    
-    let fetched = FetchUserRepositoriesFormatter()
-    
-   
-    
+    let fetched = FetchUserRepository()
     func fetchRepository() {
         itemData.removeAll()
         self.fetched.fetchUserRepository(query: query) { (items) in

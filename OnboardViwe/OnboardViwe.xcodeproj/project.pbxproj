@@ -11,7 +11,6 @@
 		2864758B2674FF3500EAC5A8 /* SearchGithubUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */; };
 		2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */; };
 		2877B70F267614B100A00BD6 /* UserRipositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877B70E267614B100A00BD6 /* UserRipositoryView.swift */; };
-		287A7980267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A797F267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift */; };
 		287A7982267C7C0F001BF1E5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A7981267C7C0F001BF1E5 /* SearchViewModel.swift */; };
 		28A13172266BC9220056E848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13171266BC9220056E848 /* AppDelegate.swift */; };
 		28A13174266BC9220056E848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13173266BC9220056E848 /* SceneDelegate.swift */; };
@@ -25,8 +24,8 @@
 		28DC4DC3266FA4350006EEFD /* TabViewTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC4DC2266FA4350006EEFD /* TabViewTraining.swift */; };
 		28DC4DC5266FA45F0006EEFD /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC4DC4266FA45F0006EEFD /* FirstView.swift */; };
 		28DC4DC7266FA4700006EEFD /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC4DC6266FA4700006EEFD /* SecondView.swift */; };
-		28E7CD56267DE86100155FA8 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7CD55267DE86100155FA8 /* Test.swift */; };
 		28E7CD58267E2B0C00155FA8 /* SearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7CD57267E2B0C00155FA8 /* SearchViewModelTest.swift */; };
+		28E7CD5A267F22A400155FA8 /* FetchUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7CD59267F22A400155FA8 /* FetchUserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,6 @@
 		2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGithubUserView.swift; sourceTree = "<group>"; };
 		2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBarView.swift; sourceTree = "<group>"; };
 		2877B70E267614B100A00BD6 /* UserRipositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRipositoryView.swift; sourceTree = "<group>"; };
-		287A797F267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserRepositoriesFormatter.swift; sourceTree = "<group>"; };
 		287A7981267C7C0F001BF1E5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		28A1316E266BC9220056E848 /* OnboardViwe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardViwe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A13171266BC9220056E848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,8 +69,8 @@
 		28DC4DC2266FA4350006EEFD /* TabViewTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewTraining.swift; sourceTree = "<group>"; };
 		28DC4DC4266FA45F0006EEFD /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		28DC4DC6266FA4700006EEFD /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
-		28E7CD55267DE86100155FA8 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		28E7CD57267E2B0C00155FA8 /* SearchViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTest.swift; sourceTree = "<group>"; };
+		28E7CD59267F22A400155FA8 /* FetchUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +108,6 @@
 				28DC4DC4266FA45F0006EEFD /* FirstView.swift */,
 				28DC4DC6266FA4700006EEFD /* SecondView.swift */,
 				28DC4DC2266FA4350006EEFD /* TabViewTraining.swift */,
-				28E7CD55267DE86100155FA8 /* Test.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				286475882674FEAA00EAC5A8 /* UserStore.swift */,
-				287A797F267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift */,
+				28E7CD59267F22A400155FA8 /* FetchUserRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,15 +325,14 @@
 			files = (
 				28DC4DC7266FA4700006EEFD /* SecondView.swift in Sources */,
 				2877B70F267614B100A00BD6 /* UserRipositoryView.swift in Sources */,
-				28E7CD56267DE86100155FA8 /* Test.swift in Sources */,
 				28DC4DC1266FA3DD0006EEFD /* OnboardView.swift in Sources */,
 				28DC4DC5266FA45F0006EEFD /* FirstView.swift in Sources */,
-				287A7980267C3431001BF1E5 /* FetchUserRepositoriesFormatter.swift in Sources */,
 				2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */,
 				28A13172266BC9220056E848 /* AppDelegate.swift in Sources */,
 				287A7982267C7C0F001BF1E5 /* SearchViewModel.swift in Sources */,
 				28A13174266BC9220056E848 /* SceneDelegate.swift in Sources */,
 				28A13176266BC9220056E848 /* ContentView.swift in Sources */,
+				28E7CD5A267F22A400155FA8 /* FetchUserRepository.swift in Sources */,
 				286475892674FEAA00EAC5A8 /* UserStore.swift in Sources */,
 				2864758B2674FF3500EAC5A8 /* SearchGithubUserView.swift in Sources */,
 				28DC4DC3266FA4350006EEFD /* TabViewTraining.swift in Sources */,

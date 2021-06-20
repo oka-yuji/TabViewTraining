@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             SearchGithubUserView()
-                .environmentObject(SearchViewModel(fetchUser: FetchUserRepositoriesFormatter()))
+                .environmentObject(SearchViewModel(fetchUser: FetchUserRepository()))
         }
     }
 }

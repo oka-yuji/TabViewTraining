@@ -12,7 +12,7 @@ protocol Fetcher {
 }
 
 
-class FetchUserRepositoriesFormatter: Fetcher {
+class FetchUserRepository: Fetcher {
     func fetchUserRepository(query: String, completion: @escaping ([Item]) -> Void) {
         guard let url: URL = URL(string: "https://api.github.com/search/repositories?q=\(query)") else { return print("URL Error") }
         URLSession.shared.dataTask(with: url) { (data, response, error) in

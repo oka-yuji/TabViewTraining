@@ -10,7 +10,7 @@ import XCTest
 
 class SearchViewModelTest: XCTestCase {
     
-    let fetcher = FetchUserRepositoriesFormatter()
+    let fetcher = FetchUserRepository()
     let testQuery = "swift"
     let itemData:[Item] = []
     
