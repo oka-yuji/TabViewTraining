@@ -1,13 +1,13 @@
 //
-//  SearchGithubUserView.swift
+//  MockView.swift
 //  OnboardViwe
 //
-//  Created by 岡優志 on 2021/06/12.
+//  Created by 岡優志 on 2021/06/22.
 //
 
 import SwiftUI
 
-struct SearchGithubUserView: View {
+struct MockView: View {
     @EnvironmentObject var searchViewModel: SearchViewModel
     let mockUserRipositoryData: [Item] = mockUserData
     
@@ -15,7 +15,7 @@ struct SearchGithubUserView: View {
         NavigationView {
             VStack(spacing: 0.0){
                 CustomSearchBarView()
-                List(searchViewModel.itemData, id: \.nodeId) { item in
+                List(mockUserRipositoryData, id: \.nodeId) { item in
                     NavigationLink (
                         destination: UserRipositoryView(fetchFullName: item.fullName ?? "", fetchLanguageText: item.language ?? "", fetchStarsText: "\(item.stargazersCount ?? 0)", fetchWatchText: "\(item.watchersCount ?? 0)", fetchForksText: "\(item.forksCount ?? 0)", fetchIssuesText: "\(item.openIssuesCount ?? 0)", fetchAvatarURL: item.owner.avatarUrl ?? "")
                             .ignoresSafeArea(edges: .bottom))
@@ -31,11 +31,10 @@ struct SearchGithubUserView: View {
     }
 }
 
-struct SearchGithubUserView_Previews: PreviewProvider {
+
+struct MockView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchGithubUserView()
+        MockView()
             .environmentObject(SearchViewModel(fetchUser: FetchUserRepository()))
     }
 }
-
-

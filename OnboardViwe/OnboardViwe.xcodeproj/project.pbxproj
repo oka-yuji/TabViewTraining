@@ -26,6 +26,7 @@
 		28DC4DC7266FA4700006EEFD /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC4DC6266FA4700006EEFD /* SecondView.swift */; };
 		28E7CD58267E2B0C00155FA8 /* SearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7CD57267E2B0C00155FA8 /* SearchViewModelTest.swift */; };
 		28E7CD5A267F22A400155FA8 /* FetchUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7CD59267F22A400155FA8 /* FetchUserRepository.swift */; };
+		28E7CD5C2681B88F00155FA8 /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7CD5B2681B88F00155FA8 /* MockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		28DC4DC6266FA4700006EEFD /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		28E7CD57267E2B0C00155FA8 /* SearchViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTest.swift; sourceTree = "<group>"; };
 		28E7CD59267F22A400155FA8 /* FetchUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUserRepository.swift; sourceTree = "<group>"; };
+		28E7CD5B2681B88F00155FA8 /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */,
+				28E7CD5B2681B88F00155FA8 /* MockView.swift */,
 				2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */,
 				2877B70E267614B100A00BD6 /* UserRipositoryView.swift */,
 				28DC4DC0266FA3DD0006EEFD /* OnboardView.swift */,
@@ -325,6 +328,7 @@
 			files = (
 				28DC4DC7266FA4700006EEFD /* SecondView.swift in Sources */,
 				2877B70F267614B100A00BD6 /* UserRipositoryView.swift in Sources */,
+				28E7CD5C2681B88F00155FA8 /* MockView.swift in Sources */,
 				28DC4DC1266FA3DD0006EEFD /* OnboardView.swift in Sources */,
 				28DC4DC5266FA45F0006EEFD /* FirstView.swift in Sources */,
 				2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */,
