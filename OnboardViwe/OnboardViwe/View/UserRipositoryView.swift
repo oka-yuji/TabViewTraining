@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Combine
 
 struct UserRipositoryView: View {
     @State var image: UIImage?
@@ -60,13 +59,6 @@ struct UserRipositoryView_Previews: PreviewProvider {
         }
     }
 }
-
-
-
-
-
-
-
 
 func downloadImageAsync(url: URL, completion: @escaping (UIImage?) -> Void) {
     let session = URLSession(configuration: .default)
