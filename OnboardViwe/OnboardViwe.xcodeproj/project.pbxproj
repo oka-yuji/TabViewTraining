@@ -28,6 +28,7 @@
 		28E7CD5A267F22A400155FA8 /* FetchUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7CD59267F22A400155FA8 /* FetchUserRepository.swift */; };
 		28E7CD5C2681B88F00155FA8 /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7CD5B2681B88F00155FA8 /* MockView.swift */; };
 		28E8523D268B3A8C00167AA4 /* CombineTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E8523C268B3A8C00167AA4 /* CombineTraining.swift */; };
+		28E8523F268B561200167AA4 /* CombineTrainingJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E8523E268B561200167AA4 /* CombineTrainingJson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		28E7CD59267F22A400155FA8 /* FetchUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUserRepository.swift; sourceTree = "<group>"; };
 		28E7CD5B2681B88F00155FA8 /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
 		28E8523C268B3A8C00167AA4 /* CombineTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTraining.swift; sourceTree = "<group>"; };
+		28E8523E268B561200167AA4 /* CombineTrainingJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTrainingJson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */,
 				2877B70E267614B100A00BD6 /* UserRipositoryView.swift */,
 				28E8523C268B3A8C00167AA4 /* CombineTraining.swift */,
+				28E8523E268B561200167AA4 /* CombineTrainingJson.swift */,
 				28DC4DC0266FA3DD0006EEFD /* OnboardView.swift */,
 				28DC4DC4266FA45F0006EEFD /* FirstView.swift */,
 				28DC4DC6266FA4700006EEFD /* SecondView.swift */,
@@ -336,6 +339,7 @@
 				28DC4DC1266FA3DD0006EEFD /* OnboardView.swift in Sources */,
 				28DC4DC5266FA45F0006EEFD /* FirstView.swift in Sources */,
 				2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */,
+				28E8523F268B561200167AA4 /* CombineTrainingJson.swift in Sources */,
 				28A13172266BC9220056E848 /* AppDelegate.swift in Sources */,
 				287A7982267C7C0F001BF1E5 /* SearchViewModel.swift in Sources */,
 				28A13174266BC9220056E848 /* SceneDelegate.swift in Sources */,
