@@ -13,6 +13,13 @@ class SearchViewModelTest: XCTestCase {
     let fetcher = FetchUserRepository()
     let testQuery = "swift"
     let itemData:[Item] = []
+    let testFullName = ["apple/swift",
+                        "openstack/swift",
+                        "tensorflow/swift",
+                        "SwiftyJSON/SwiftyJSON",
+                        "ipader/SwiftGuide",
+                        "SwifterSwift/SwifterSwift",
+                        "realm/SwiftLint"]
     
     func testAsync() {
         let exp = XCTestExpectation(description: testQuery)
@@ -23,6 +30,7 @@ class SearchViewModelTest: XCTestCase {
         
         wait(for: [exp], timeout: 5.0)
     }
+    
     
     
 

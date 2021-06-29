@@ -103,8 +103,8 @@
 		286475852674F96000EAC5A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */,
 				28E7CD5B2681B88F00155FA8 /* MockView.swift */,
+				2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */,
 				2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */,
 				2877B70E267614B100A00BD6 /* UserRipositoryView.swift */,
 				28DC4DC0266FA3DD0006EEFD /* OnboardView.swift */,
