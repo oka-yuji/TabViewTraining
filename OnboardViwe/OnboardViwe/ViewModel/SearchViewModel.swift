@@ -16,11 +16,20 @@ class SearchViewModel: ObservableObject {
     // Viewとのバインディング変数プロパティ
     @Published var itemData: [Item] = []
     @Published var query = ""
+    @Published var error: APIError?
     
     func fetcher() {
         let queryText = query
         itemData.removeAll()
-        fetchUser.fetchUserRepository(query: queryText) {(item) in self.itemData.append(contentsOf: item)}
+        
+        fetchUser.fetchUserRepository(query: queryText) { [unowned self] (result) in
+            switch result {
+            case .success(let suc):
+                itemData.append(contentsOf: suc)
+            case .failure(let error):
+                self.error = error
+            }
+        }
     }
     
 //    let fetched = FetchUserRepository()
