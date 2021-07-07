@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280AFA9626908F8B0029C44A /* SwiftUIViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280AFA9526908F8B0029C44A /* SwiftUIViewTest.swift */; };
 		286475892674FEAA00EAC5A8 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286475882674FEAA00EAC5A8 /* UserStore.swift */; };
 		2864758B2674FF3500EAC5A8 /* SearchGithubUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */; };
 		2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */; };
 		2877B70F267614B100A00BD6 /* UserRipositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877B70E267614B100A00BD6 /* UserRipositoryView.swift */; };
+		287869A92695D95B009DA0C6 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287869A82695D95B009DA0C6 /* APIError.swift */; };
 		287A7982267C7C0F001BF1E5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A7981267C7C0F001BF1E5 /* SearchViewModel.swift */; };
 		28A13172266BC9220056E848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13171266BC9220056E848 /* AppDelegate.swift */; };
 		28A13174266BC9220056E848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13173266BC9220056E848 /* SceneDelegate.swift */; };
@@ -49,10 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		280AFA9526908F8B0029C44A /* SwiftUIViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewTest.swift; sourceTree = "<group>"; };
 		286475882674FEAA00EAC5A8 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGithubUserView.swift; sourceTree = "<group>"; };
 		2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBarView.swift; sourceTree = "<group>"; };
 		2877B70E267614B100A00BD6 /* UserRipositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRipositoryView.swift; sourceTree = "<group>"; };
+		287869A82695D95B009DA0C6 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		287A7981267C7C0F001BF1E5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		28A1316E266BC9220056E848 /* OnboardViwe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardViwe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A13171266BC9220056E848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				28E7CD5B2681B88F00155FA8 /* MockView.swift */,
+				280AFA9526908F8B0029C44A /* SwiftUIViewTest.swift */,
 				2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */,
 				2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */,
 				2877B70E267614B100A00BD6 /* UserRipositoryView.swift */,
@@ -124,6 +129,7 @@
 		286475862674F96B00EAC5A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				287869A82695D95B009DA0C6 /* APIError.swift */,
 				286475882674FEAA00EAC5A8 /* UserStore.swift */,
 				28E7CD59267F22A400155FA8 /* FetchUserRepository.swift */,
 			);
@@ -347,7 +353,9 @@
 				28E7CD5A267F22A400155FA8 /* FetchUserRepository.swift in Sources */,
 				286475892674FEAA00EAC5A8 /* UserStore.swift in Sources */,
 				2864758B2674FF3500EAC5A8 /* SearchGithubUserView.swift in Sources */,
+				280AFA9626908F8B0029C44A /* SwiftUIViewTest.swift in Sources */,
 				28DC4DC3266FA4350006EEFD /* TabViewTraining.swift in Sources */,
+				287869A92695D95B009DA0C6 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

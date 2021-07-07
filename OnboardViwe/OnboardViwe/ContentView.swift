@@ -14,9 +14,10 @@ struct ContentView: View {
 //            SearchGithubUserView()
 //            MockView()
 //                .environmentObject(SearchViewModel(fetchUser: FetchUserRepository()))
-            CombineTrainingJson()
-                .environmentObject(WebModel2())
-            OnboardView()
+//            CombineTrainingJson()
+//                .environmentObject(WebModel2())
+//            OnboardView()
+            SwiftUIViewTest()
         }
     }
 }

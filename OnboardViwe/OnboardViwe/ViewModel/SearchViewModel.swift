@@ -19,14 +19,15 @@ class SearchViewModel: ObservableObject {
     
     func fetcher() {
         let queryText = query
+        itemData.removeAll()
         fetchUser.fetchUserRepository(query: queryText) {(item) in self.itemData.append(contentsOf: item)}
     }
     
-    let fetched = FetchUserRepository()
-    func fetchRepository() {
-        itemData.removeAll()
-        self.fetched.fetchUserRepository(query: query) { (items) in
-            self.itemData.append(contentsOf: items)
-        }
-    }
+//    let fetched = FetchUserRepository()
+//    func fetchRepository() {
+//        itemData.removeAll()
+//        self.fetched.fetchUserRepository(query: query) { (items) in
+//            self.itemData.append(contentsOf: items)
+//        }
+//    }
 }

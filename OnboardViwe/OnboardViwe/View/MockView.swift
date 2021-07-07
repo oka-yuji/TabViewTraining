@@ -15,7 +15,7 @@ struct MockView: View {
         NavigationView {
             VStack(spacing: 0.0){
                 CustomSearchBarView()
-                List(mockUserRipositoryData, id: \.nodeId) { item in
+                ForEach(mockUserRipositoryData, id: \.nodeId) { item in
                     NavigationLink (
                         destination: UserRipositoryView(fetchFullName: item.fullName ?? "", fetchLanguageText: item.language ?? "", fetchStarsText: "\(item.stargazersCount ?? 0)", fetchWatchText: "\(item.watchersCount ?? 0)", fetchForksText: "\(item.forksCount ?? 0)", fetchIssuesText: "\(item.openIssuesCount ?? 0)", fetchAvatarURL: item.owner.avatarUrl ?? "")
                             .ignoresSafeArea(edges: .bottom))
@@ -23,8 +23,8 @@ struct MockView: View {
                         Text(item.fullName ?? "")
                     }
                 }
+                Spacer()
                 .navigationTitle("GitHub")
-                .navigationBarTitleDisplayMode(.inline)
             }
             Spacer()
         }
