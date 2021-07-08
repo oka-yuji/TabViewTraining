@@ -8,8 +8,9 @@
 @testable import OnboardViwe
 
 class MockFetchRepository: Fetcher {
-    var item: [Item]!
+        
+    var fetchResult: Result<[Item], APIError> = .success(mockUserData)
     func fetchUserRepository(query: String, completion: @escaping (Result<[Item], APIError>) -> Void) {
-        completion(.success(item))
+        completion(fetchResult)
     }
 }

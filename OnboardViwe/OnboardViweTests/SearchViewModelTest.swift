@@ -11,12 +11,19 @@ import XCTest
 class SearchViewModelTest: XCTestCase {
     
     var searchViewModel: SearchViewModel!
+    var mockFetchreposiory: MockFetchRepository!
    
     override func setUp() {
         searchViewModel = .init(fetchUser: MockFetchRepository())
     }
     
     func testAsync() {
+        let item: [Item] = mockUserData
+        searchViewModel.query = "swift"
+        mockFetchreposiory.fetchResult = .success(item)
+        searchViewModel.fetcher()
+        
+        XCTAssertTrue(searchViewModel.success)
        
     }
     

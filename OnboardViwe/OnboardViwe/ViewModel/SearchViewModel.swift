@@ -17,15 +17,16 @@ class SearchViewModel: ObservableObject {
     @Published var itemData: [Item] = []
     @Published var query = ""
     @Published var error: APIError?
+    @Published var success = false
     
     func fetcher() {
-        let queryText = query
         itemData.removeAll()
-        
-        fetchUser.fetchUserRepository(query: queryText) { [unowned self] (result) in
+        success = false
+        fetchUser.fetchUserRepository(query: query) { [unowned self] (result) in
             switch result {
             case .success(let suc):
                 itemData.append(contentsOf: suc)
+                success = true
             case .failure(let error):
                 self.error = error
             }
