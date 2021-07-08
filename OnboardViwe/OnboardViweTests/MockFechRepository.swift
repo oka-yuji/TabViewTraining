@@ -10,6 +10,7 @@
 final class MockFetchRepository: Fetcher {
 
     var fetchResult: Result<[Item], APIError> = .success(mockUserData)
+    
     func fetchUserRepository(query: String, completion: @escaping (Result<[Item], APIError>) -> Void) {
         completion(fetchResult)
     }

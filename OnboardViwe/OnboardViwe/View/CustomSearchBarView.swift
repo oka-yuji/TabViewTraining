@@ -20,8 +20,8 @@ struct CustomSearchBarView: View {
                 TextField("input user name", text: $searchText, onCommit: {
                     // enter時に作動
                     searchViewModel.query = ""
-                    searchViewModel.query = searchText
-                    searchViewModel.fetcher()
+                    
+                    searchViewModel.fetcher(query: searchText)
 //                    searchViewModel.fetchRepository()
                 })
             }

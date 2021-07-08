@@ -11,13 +11,13 @@ struct ContentView: View {
    
     var body: some View {
         VStack {
-//            SearchGithubUserView()
+            SearchGithubUserView()
 //            MockView()
-//                .environmentObject(SearchViewModel(fetchUser: FetchUserRepository()))
+                .environmentObject(SearchViewModel(fetchUser: FetchUserRepository()))
 //            CombineTrainingJson()
 //                .environmentObject(WebModel2())
 //            OnboardView()
-            SwiftUIViewTest()
+//            SwiftUIViewTest()
         }
     }
 }
