@@ -13,6 +13,7 @@
 		2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */; };
 		2877B70F267614B100A00BD6 /* UserRipositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877B70E267614B100A00BD6 /* UserRipositoryView.swift */; };
 		287869A92695D95B009DA0C6 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287869A82695D95B009DA0C6 /* APIError.swift */; };
+		287869AB2697255E009DA0C6 /* MockFechRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287869AA2697255E009DA0C6 /* MockFechRepository.swift */; };
 		287A7982267C7C0F001BF1E5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A7981267C7C0F001BF1E5 /* SearchViewModel.swift */; };
 		28A13172266BC9220056E848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13171266BC9220056E848 /* AppDelegate.swift */; };
 		28A13174266BC9220056E848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13173266BC9220056E848 /* SceneDelegate.swift */; };
@@ -57,6 +58,7 @@
 		2877B70C2675A9B700A00BD6 /* CustomSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBarView.swift; sourceTree = "<group>"; };
 		2877B70E267614B100A00BD6 /* UserRipositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRipositoryView.swift; sourceTree = "<group>"; };
 		287869A82695D95B009DA0C6 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		287869AA2697255E009DA0C6 /* MockFechRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFechRepository.swift; sourceTree = "<group>"; };
 		287A7981267C7C0F001BF1E5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		28A1316E266BC9220056E848 /* OnboardViwe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardViwe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A13171266BC9220056E848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				28A13188266BC9230056E848 /* OnboardViweTests.swift */,
 				28E7CD57267E2B0C00155FA8 /* SearchViewModelTest.swift */,
+				287869AA2697255E009DA0C6 /* MockFechRepository.swift */,
 				28A1318A266BC9230056E848 /* Info.plist */,
 			);
 			path = OnboardViweTests;
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28E7CD58267E2B0C00155FA8 /* SearchViewModelTest.swift in Sources */,
+				287869AB2697255E009DA0C6 /* MockFechRepository.swift in Sources */,
 				28A13189266BC9230056E848 /* OnboardViweTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

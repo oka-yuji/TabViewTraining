@@ -10,25 +10,14 @@ import XCTest
 
 class SearchViewModelTest: XCTestCase {
     
-    let fetcher = FetchUserRepository()
-    let testQuery = "swift"
-    let itemData:[Item] = []
-    let testFullName = ["apple/swift",
-                        "openstack/swift",
-                        "tensorflow/swift",
-                        "SwiftyJSON/SwiftyJSON",
-                        "ipader/SwiftGuide",
-                        "SwifterSwift/SwifterSwift",
-                        "realm/SwiftLint"]
+    var searchViewModel: SearchViewModel!
+   
+    override func setUp() {
+        searchViewModel = .init(fetchUser: MockFetchRepository())
+    }
     
     func testAsync() {
-        let exp = XCTestExpectation(description: testQuery)
-        fetcher.fetchUserRepository(query: testQuery) { item in
-            XCTAssertEqual(item[0].fullName!, "apple/swift")
-            exp.fulfill()
-        }
-        
-        wait(for: [exp], timeout: 5.0)
+       
     }
     
     

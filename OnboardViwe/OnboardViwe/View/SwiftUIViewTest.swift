@@ -60,26 +60,28 @@ struct SwiftUIViewTest_Previews: PreviewProvider {
 struct ListView: View {
     @State private var maxWidth = UIScreen.main.bounds.width
     var body: some View {
-        VStack{
-            HStack{
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .padding(.trailing, 20)
-                VStack(alignment: .leading){
-                    Text("fullName")
-                        .font(.title2)
-                    Text("language")
+        NavigationView {
+            VStack{
+                HStack{
+                    Image(systemName: "person.circle")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .padding(.trailing, 20)
+                    VStack(alignment: .leading){
+                        Text("fullName")
+                            .font(.title2)
+                        Text("language")
+                    }
+                    Spacer()
+                    Image(systemName: "arrow.right")
+                        .font(.title)
                 }
-                Spacer()
-                Image(systemName: "arrow.right")
-                    .font(.title)
+                .padding(20)
+                .foregroundColor(.white)
+                .frame(width: maxWidth * 0.9, height: 80)
+                .background(Color.black)
+                .clipShape(RoundedRectangle(cornerRadius: 25.0))
             }
-            .padding(20)
-            .foregroundColor(.white)
-            .frame(width: maxWidth * 0.9, height: 80)
-            .background(Color.black)
-            .clipShape(RoundedRectangle(cornerRadius: 25.0))
         }
     }
 }
