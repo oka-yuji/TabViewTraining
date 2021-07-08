@@ -18,10 +18,12 @@ class SearchViewModel: ObservableObject {
     @Published var query = ""
     @Published var error: APIError?
     @Published var success = false
+    @Published var failure = false
     
     func fetcher() {
         itemData.removeAll()
         success = false
+        failure = false
         fetchUser.fetchUserRepository(query: query) { [unowned self] (result) in
             switch result {
             case .success(let suc):
@@ -29,6 +31,7 @@ class SearchViewModel: ObservableObject {
                 success = true
             case .failure(let error):
                 self.error = error
+                failure = true
             }
         }
     }

@@ -14,17 +14,28 @@ class SearchViewModelTest: XCTestCase {
     var mockFetchreposiory: MockFetchRepository!
    
     override func setUp() {
+        mockFetchreposiory = MockFetchRepository()
         searchViewModel = .init(fetchUser: MockFetchRepository())
     }
     
-    func testAsync() {
-        let item: [Item] = mockUserData
-        searchViewModel.query = "swift"
-        mockFetchreposiory.fetchResult = .success(item)
+    func test入力した文字に問題がなかった場合成功を返す() {
+        
+        mockFetchreposiory.fetchResult = .success(mockUserData)
+        
         searchViewModel.fetcher()
         
         XCTAssertTrue(searchViewModel.success)
        
+    }
+    
+    func test入力した文字に誤りがあった場合エラーを返す() {
+        
+        mockFetchreposiory.fetchResult = .success(mockUserData)
+        
+        searchViewModel.fetcher()
+
+        XCTAssertNotNil(searchViewModel.failure)
+        
     }
     
     
