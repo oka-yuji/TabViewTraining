@@ -22,10 +22,9 @@ class SearchViewModelTest: XCTestCase {
         
         mockFetchreposiory.fetchResult = .success(mockUserData)
         
-        searchViewModel.fetcher(query: "swift")
+            searchViewModel.fetcher(query: "swift")
         
-        XCTAssertTrue(searchViewModel.success)
-       
+            XCTAssertTrue(self.searchViewModel.success)
     }
     
     func test入力した文字に誤りがあった場合エラーを返す() {
