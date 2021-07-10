@@ -12,7 +12,7 @@ class SearchViewModelTest: XCTestCase {
     
     var searchViewModel: SearchViewModel!
     var mockFetchreposiory: MockFetchRepository!
-   
+    
     override func setUp() {
         mockFetchreposiory = MockFetchRepository()
         searchViewModel = .init(fetchUser: mockFetchreposiory)
@@ -20,33 +20,38 @@ class SearchViewModelTest: XCTestCase {
     
     func test入力した文字に問題がなかった場合成功を返す() {
         
-        mockFetchreposiory.fetchResult = .success(mockUserData)
+        let exp = XCTestExpectation(description: "async test")
         
-            searchViewModel.fetcher(query: "swift")
+//        mockFetchreposiory.fetchResult = .success(mockUserData)
         
-            XCTAssertTrue(self.searchViewModel.success)
+        searchViewModel.fetcher(query: "swift")
+        
+        XCTAssertTrue(self.searchViewModel.success)
+        exp.fulfill()
+        
+        wait(for: [exp], timeout: 3.0)
     }
     
     func test入力した文字に誤りがあった場合エラーを返す() {
-
+        
         mockFetchreposiory.fetchResult = .failure(APIError.invalidURL)
-
+        
         searchViewModel.fetcher(query: "スイフト")
         
         XCTAssertNotNil(searchViewModel.error)
-
+        
     }
     
     
     
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-
+    
+    
 }
