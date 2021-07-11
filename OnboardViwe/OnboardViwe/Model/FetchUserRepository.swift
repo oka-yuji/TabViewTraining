@@ -9,10 +9,10 @@ import Foundation
 import Combine
 
 protocol Fetcher {
-    func fetchUserRepository(query: String, completion: @escaping (Result<[Item], APIError>) -> Void)
+    func fetchUserRepository(query: String, completion: @escaping (Result<[Item], APIError>) -> ())
 }
 class FetchUserRepository: Fetcher {
-    func fetchUserRepository(query: String, completion: @escaping (Result<[Item], APIError>) -> Void) {
+    func fetchUserRepository(query: String, completion: @escaping (Result<[Item], APIError>) -> ()) {
         guard let url: URL = URL(string: "https://api.github.com/search/repositories?q=\(query)")
         else { return completion(.failure(.invalidURL)) }
         URLSession.shared.dataTask(with: url) { (data, response, error) in

@@ -13,6 +13,12 @@ class SearchViewModelTest: XCTestCase {
     var searchViewModel: SearchViewModel!
     var mockFetchreposiory: MockFetchRepository!
     
+    private var testItem: [Item] = []
+    private var testError: APIError?
+    private let testWord = "swift"
+    private var testSuccess = false
+    private var isTestError = false
+    
     override func setUp() {
         mockFetchreposiory = MockFetchRepository()
         searchViewModel = .init(fetchUser: mockFetchreposiory)
@@ -20,23 +26,19 @@ class SearchViewModelTest: XCTestCase {
     
     func test入力した文字に問題がなかった場合成功を返す() {
         
-        let exp = XCTestExpectation(description: "async test")
+        mockFetchreposiory.fetchResult = .success(mockUserData)
         
-//        mockFetchreposiory.fetchResult = .success(mockUserData)
+        searchViewModel.fetcher(query: testWord)
         
-        searchViewModel.fetcher(query: "swift")
+        XCTAssertTrue(searchViewModel.success)
         
-        XCTAssertTrue(self.searchViewModel.success)
-        exp.fulfill()
-        
-        wait(for: [exp], timeout: 3.0)
     }
     
     func test入力した文字に誤りがあった場合エラーを返す() {
         
         mockFetchreposiory.fetchResult = .failure(APIError.invalidURL)
         
-        searchViewModel.fetcher(query: "スイフト")
+        searchViewModel.fetcher(query: testWord)
         
         XCTAssertNotNil(searchViewModel.error)
         
