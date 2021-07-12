@@ -44,6 +44,16 @@ class SearchViewModelTest: XCTestCase {
         
     }
     
+    func testネットワークエラー() {
+        
+        mockFetchreposiory.fetchResult = .failure(APIError.networkError)
+        
+        searchViewModel.fetcher(query: testWord)
+        
+        XCTAssertEqual(APIError.networkError, searchViewModel.error)
+        
+    }
+    
     
     
     
