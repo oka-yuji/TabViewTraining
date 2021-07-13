@@ -40,7 +40,7 @@ class SearchViewModelTest: XCTestCase {
         
         searchViewModel.fetcher(query: testWord)
         
-        XCTAssertNotNil(searchViewModel.error)
+        XCTAssertEqual(APIError.invalidURL, searchViewModel.error)
         
     }
     

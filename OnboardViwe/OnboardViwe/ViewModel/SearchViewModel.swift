@@ -17,8 +17,8 @@ class SearchViewModel: ObservableObject {
     @Published var itemData: [Item] = []
     @Published var query = ""
     @Published var error: APIError?
-    @Published var success: Bool!
-    @Published var failure: Bool!
+    @Published var success = false
+    @Published var failure = false
     
     func fetcher(query: String) {
         itemData.removeAll()
