@@ -16,6 +16,7 @@
 		287869AB2697255E009DA0C6 /* MockFechRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287869AA2697255E009DA0C6 /* MockFechRepository.swift */; };
 		287869AD2697C86E009DA0C6 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287869AC2697C86E009DA0C6 /* AlertView.swift */; };
 		287A7982267C7C0F001BF1E5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A7981267C7C0F001BF1E5 /* SearchViewModel.swift */; };
+		2882CAC226A106A0001EA0A0 /* PopoversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882CAC126A106A0001EA0A0 /* PopoversView.swift */; };
 		28A13172266BC9220056E848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13171266BC9220056E848 /* AppDelegate.swift */; };
 		28A13174266BC9220056E848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13173266BC9220056E848 /* SceneDelegate.swift */; };
 		28A13176266BC9220056E848 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A13175266BC9220056E848 /* ContentView.swift */; };
@@ -62,6 +63,7 @@
 		287869AA2697255E009DA0C6 /* MockFechRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFechRepository.swift; sourceTree = "<group>"; };
 		287869AC2697C86E009DA0C6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		287A7981267C7C0F001BF1E5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2882CAC126A106A0001EA0A0 /* PopoversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoversView.swift; sourceTree = "<group>"; };
 		28A1316E266BC9220056E848 /* OnboardViwe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardViwe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A13171266BC9220056E848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28A13173266BC9220056E848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				28E7CD5B2681B88F00155FA8 /* MockView.swift */,
+				2882CAC126A106A0001EA0A0 /* PopoversView.swift */,
 				280AFA9526908F8B0029C44A /* SwiftUIViewTest.swift */,
 				287869AC2697C86E009DA0C6 /* AlertView.swift */,
 				2864758A2674FF3500EAC5A8 /* SearchGithubUserView.swift */,
@@ -350,6 +353,7 @@
 				28E7CD5C2681B88F00155FA8 /* MockView.swift in Sources */,
 				28E8523D268B3A8C00167AA4 /* CombineTraining.swift in Sources */,
 				28DC4DC1266FA3DD0006EEFD /* OnboardView.swift in Sources */,
+				2882CAC226A106A0001EA0A0 /* PopoversView.swift in Sources */,
 				28DC4DC5266FA45F0006EEFD /* FirstView.swift in Sources */,
 				2877B70D2675A9B700A00BD6 /* CustomSearchBarView.swift in Sources */,
 				28E8523F268B561200167AA4 /* CombineTrainingJson.swift in Sources */,
