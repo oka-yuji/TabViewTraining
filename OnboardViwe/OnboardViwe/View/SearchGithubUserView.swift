@@ -32,8 +32,8 @@ struct SearchGithubUserView: View {
                     }
                     .navigationTitle("GitHub")
                 }
-                AlertView()
-                    .edgesIgnoringSafeArea(.all)
+//                AlertView()
+//                    .edgesIgnoringSafeArea(.all)
             }
             Spacer()
         }

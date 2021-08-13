@@ -21,7 +21,7 @@ struct CustomSearchBarView: View {
                     // enter時に作動
                     searchViewModel.query = ""
                     
-                    searchViewModel.fetcher(query: searchText)
+                    searchViewModel.fetchGitHubRepository(query: searchText)
 //                    searchViewModel.fetchRepository()
                 })
             }

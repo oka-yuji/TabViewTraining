@@ -20,7 +20,7 @@ class SearchViewModel: ObservableObject {
     @Published var success = false
     @Published var failure = false
     
-    func fetcher(query: String) {
+    func fetchGitHubRepository(query: String) {
         itemData.removeAll()
         success = false
         failure = false

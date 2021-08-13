@@ -28,7 +28,7 @@ class SearchViewModelTest: XCTestCase {
         
         mockFetchreposiory.fetchResult = .success(mockUserData)
         
-        searchViewModel.fetcher(query: testWord)
+        searchViewModel.fetchGitHubRepository(query: testWord)
         
         XCTAssertTrue(searchViewModel.success)
         
@@ -38,7 +38,7 @@ class SearchViewModelTest: XCTestCase {
         
         mockFetchreposiory.fetchResult = .failure(APIError.invalidURL)
         
-        searchViewModel.fetcher(query: testWord)
+        searchViewModel.fetchGitHubRepository(query: testWord)
         
         XCTAssertEqual(APIError.invalidURL, searchViewModel.error)
         
@@ -48,7 +48,7 @@ class SearchViewModelTest: XCTestCase {
         
         mockFetchreposiory.fetchResult = .failure(APIError.networkError)
         
-        searchViewModel.fetcher(query: testWord)
+        searchViewModel.fetchGitHubRepository(query: testWord)
         
         XCTAssertEqual(APIError.networkError, searchViewModel.error)
         
